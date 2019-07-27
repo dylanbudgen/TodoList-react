@@ -27,7 +27,7 @@ class TodoList extends Component {
       }
 
     handlePriority = (e) => {
-      const  priority = e.target.value
+      const  priority = e.target.checked
       this.setState({
         currentPriority: priority,
         currentKey: Date.now()
@@ -57,6 +57,9 @@ class TodoList extends Component {
       } else {
         console.log('Note empty');
       }
+
+
+      console.log(this.state.items);
     }
       
     deleteItem = (key) => {

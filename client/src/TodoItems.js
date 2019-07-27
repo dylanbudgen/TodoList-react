@@ -25,7 +25,7 @@ class TodoItems extends Component {
 class TodoItem extends Component {
     
   render() {
-    const variant = (this.props.item.priority == 'on') ? ('danger') : ('');
+    const variant = (this.props.item.priority == true) ? ('danger') : ('');
     
     return (
 

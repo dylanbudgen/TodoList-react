@@ -2,18 +2,11 @@ import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-// https://codesandbox.io/s/pee3m
-
 class TodoInput extends Component {
 
     componentDidUpdate() {
         this.props.inputElement.current.focus()
     }
-
-    handleChange = (event) => {
-        //setAlignment(newAlignment);
-        console.log("toggle");
-    };
 
     render() {
         return (
@@ -31,7 +24,8 @@ class TodoInput extends Component {
                     <Form.Check 
                         type="checkbox" 
                         label="High priority"
-                        onChange={this.props.handlePriority} />
+                        checked={this.props.currentPriority}
+                        onClick={this.props.handlePriority} />
                 </Form.Group>
                 <Button variant="primary" type="submit" >
                     Create Task
